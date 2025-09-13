@@ -20,7 +20,8 @@ class Employee {
             System.out.println("Tenure: " + tenure + " years => Less than or equal to 3 years");
         }
     }
-        public static void main(String[] args) {
+
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Employee emp1 = new Employee();
 
@@ -37,5 +38,18 @@ class Employee {
         emp1.checkTenure(currentYear);
 
         sc.close();
+    }
+}
+
+class EmployeeRunner {
+    public static void main(String[] args) {
+        Employee emp1 = new Employee();
+        emp1.setEmployeeData("E101", "Jawad Ahmad", 2019);
+
+        Employee emp2 = new Employee();
+        emp2.setEmployeeData("E102", "Ali Khan", 2022);
+
+        emp1.checkTenure(2025);
+        emp2.checkTenure(2025);
     }
 }
